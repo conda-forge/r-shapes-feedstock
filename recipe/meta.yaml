@@ -35,12 +35,14 @@ requirements:
     - r-minpack.lm
     - r-rgl
     - r-scatterplot3d
+    - xorg-libxfixes  # [linux]
   run:
     - r-base
     - r-mass
     - r-minpack.lm
     - r-rgl
     - r-scatterplot3d
+    - xorg-libxfixes  # [linux]
 
 test:
   commands:
