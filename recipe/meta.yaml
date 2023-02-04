@@ -22,8 +22,8 @@ build:
 
 requirements:
   build:
-    - {{ posix }}zip               # [win]
-    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - {{ posix }}zip                 # [win]
+    - cross-r-base {{ r_base }}      # [build_platform != target_platform]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('libxdamage') }}        # [linux]
     - {{ cdt('libxfixes') }}         # [linux]
@@ -44,12 +44,12 @@ requirements:
 
 test:
   commands:
-    - LD_LIBRARY_PATH="${BUILD_PREFIX}/x86_64-conda-linux-gnu/sysroot/usr/lib64: ${BUILD_PREFIX}/lib" $R -e "library('shapes')"  # [not win]
+    - LD_LIBRARY_PATH="${BUILD_PREFIX}/x86_64-conda-linux-gnu/sysroot/usr/lib64:${BUILD_PREFIX}/lib" $R -e "library('shapes')"  # [not win]
     - "\"%R%\" -e \"library('shapes')\""  # [win]
 
 about:
   home: http://www.maths.nottingham.ac.uk/~ild/shapes
-  license: GPL-2.0-or-later
+  license: GPL-2.0-only
   summary: Routines for the statistical analysis of landmark shapes, including Procrustes analysis, graphical displays, principal components analysis, permutation and bootstrap tests, thin-plate spline transformation grids and comparing covariance matrices. See Dryden, I.L. and Mardia, K.V. (2016). Statistical shape analysis,
     with Applications in R (2nd Edition), John Wiley and Sons.
   license_family: GPL2
