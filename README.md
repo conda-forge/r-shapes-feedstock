@@ -3,7 +3,7 @@ About r-shapes
 
 Home: http://www.maths.nottingham.ac.uk/~ild/shapes
 
-Package license: GPL-2.0-or-later
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shapes-feedstock/blob/main/LICENSE.txt)
 
