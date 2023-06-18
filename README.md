@@ -1,11 +1,11 @@
-About r-shapes
-==============
+About r-shapes-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shapes-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.maths.nottingham.ac.uk/~ild/shapes
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shapes-feedstock/blob/main/LICENSE.txt)
 
 Summary: Routines for the statistical analysis of landmark shapes, including Procrustes analysis, graphical displays, principal components analysis, permutation and bootstrap tests, thin-plate spline transformation grids and comparing covariance matrices. See Dryden, I.L. and Mardia, K.V. (2016). Statistical shape analysis, with Applications in R (2nd Edition), John Wiley and Sons.
 
