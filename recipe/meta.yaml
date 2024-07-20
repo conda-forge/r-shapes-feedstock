@@ -1,6 +1,5 @@
 {% set version = "1.2.7" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-shapes
@@ -13,8 +12,7 @@ source:
   sha256: 1f31b3d87e06142f75d4253df81fd7475e8c2aec4a7aab0b720288c4b432b894
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
