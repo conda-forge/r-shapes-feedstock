@@ -1,4 +1,4 @@
-{% set version = "1.2.7" %}
+{% set version = "1.2.8" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,14 +9,18 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shapes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shapes/shapes_{{ version }}.tar.gz
-  sha256: 1f31b3d87e06142f75d4253df81fd7475e8c2aec4a7aab0b720288c4b432b894
+  sha256: 2b1df1abbe8f4836e20bb23844fabe8acb3f7ca09b9fc9fbe9cd55d972463333
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -30,12 +34,14 @@ requirements:
   host:
     - r-base
     - r-mass
+    - r-fitdistrplus
     - r-minpack.lm
     - r-rgl
     - r-scatterplot3d
   run:
     - r-base
     - r-mass
+    - r-fitdistrplus
     - r-minpack.lm
     - r-rgl
     - r-scatterplot3d
