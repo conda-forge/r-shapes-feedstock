@@ -12,7 +12,7 @@ source:
   sha256: 2b1df1abbe8f4836e20bb23844fabe8acb3f7ca09b9fc9fbe9cd55d972463333
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -26,11 +26,6 @@ requirements:
   build:
     - {{ posix }}zip                 # [win]
     - cross-r-base {{ r_base }}      # [build_platform != target_platform]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('libxdamage') }}        # [linux]
-    - {{ cdt('libxfixes') }}         # [linux]
-    - {{ cdt('libxxf86vm') }}        # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
   host:
     - r-base
     - r-mass
@@ -38,6 +33,7 @@ requirements:
     - r-minpack.lm
     - r-rgl
     - r-scatterplot3d
+    - libgl-devel                    # [linux]
   run:
     - r-base
     - r-mass
@@ -54,8 +50,8 @@ test:
 about:
   home: http://www.maths.nottingham.ac.uk/~ild/shapes
   license: GPL-2.0-only
-  summary: Routines for the statistical analysis of landmark shapes, including Procrustes analysis, graphical displays, principal components analysis, permutation and bootstrap tests, thin-plate spline transformation grids and comparing covariance matrices. See Dryden, I.L. and Mardia, K.V. (2016). Statistical shape analysis,
-    with Applications in R (2nd Edition), John Wiley and Sons.
+  summary: Routines for the statistical analysis of landmark shapes, including Procrustes analysis, graphical displays, principal components analysis, permutation and bootstrap tests, thin-plate spline transformation grids and comparing covariance matrices. See Dryden, I.L. and Mardia, K.V. (2016). Statistical shape 
+    analysis, with Applications in R (2nd Edition), John Wiley and Sons.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
