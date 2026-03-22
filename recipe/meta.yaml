@@ -33,7 +33,6 @@ requirements:
     - r-minpack.lm
     - r-rgl
     - r-scatterplot3d
-    - libgl-devel                    # [linux]
   run:
     - r-base
     - r-mass
